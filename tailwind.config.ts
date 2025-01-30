@@ -10,6 +10,11 @@ export default {
     extend: {
       colors: {
         background: "#011627",
+        main_color: '#607B96',
+        custom_orange: '#FEA55F',
+        custom_purple: '#4D5BCE',
+        custom_green: '#43D9AD',
+        custom_pale_orange: '#E99287',
         foreground: "var(--foreground)",
       },
     },
