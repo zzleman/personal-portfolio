@@ -1,25 +1,17 @@
 import Image from 'next/image';
-import codeMain from '../assets/code.png';
-import codeSecondary from '../assets/code-secondary.png';
+import mainImg from '../assets/mainIconsdark.svg';
 
 export default function CodeClient() {
   return (
-    <div className="my-20 flex flex-col gap-7">
-      <div>
-        <Image src={codeSecondary} alt="code" width={500} height={300} />
-      </div>
-      <div>
-        <Image src={codeSecondary} alt="code" width={500} height={300} />
-      </div>
-      <div>
-        <Image src={codeMain} alt="code" width={500} height={300} />
-      </div>
-      <div>
-        <Image src={codeSecondary} alt="code" width={500} height={300} />
-      </div>
-      <div>
-        <Image src={codeSecondary} alt="code" width={500} height={300} />
-      </div>
+    <div className="relative inline-block">
+      <div className="absolute inset-0 bg-custom_purple rounded-full blur-3xl opacity-30 z-0"></div>
+      <Image
+        src={mainImg}
+        alt="code"
+        height={650}
+        width={650}
+        className="relative z-10"
+      />
     </div>
   );
 }

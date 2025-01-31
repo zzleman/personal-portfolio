@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="h-screen flex justify-center items-center gap-16">
+    <div className="h-screen flex justify-center items-center gap-16">
       <div className="left text-white leading-10">
         <div className="top">
           <h6>Hi all. I am</h6>
@@ -13,6 +13,10 @@ export default function Home() {
           </h3>
         </div>
         <div className="bottom mt-4">
+          <p className="text-main_color">
+            <span>&#x2f; &#x2f;</span>
+            <span className="px-2">welcome to my portfolio</span>
+          </p>
           <p className="text-main_color">
             <span>&#x2f; &#x2f;</span>
             <span className="px-2">
@@ -35,6 +39,6 @@ export default function Home() {
       <div className="right">
         <Code />
       </div>
-    </main>
+    </div>
   );
 }

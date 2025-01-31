@@ -1,25 +1,39 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname();
+
   const linkClass =
-    'active:text-white active:border-b-custom_orange  hover:text-white border border-main_color flex items-center px-4 cursor-pointer border-opacity-15';
-  const nameClass = 'col-span-2';
+    'hover:text-white border border-main_color flex items-center px-4 cursor-pointer border-opacity-15';
+
+  const isActive = (href: string) =>
+    pathname === href ? 'border-b-4 border-custom_orange text-white' : '';
+
   return (
     <div className="text-main_color flex justify-between min-h-14 border border-main_color border-opacity-15 z-50 ">
       <ul className="left grid grid-cols-5">
-        <li className={`${linkClass} ${nameClass}`}>leman-zeynalli</li>
-        <Link className={linkClass} href="/">
+        <li className={`${linkClass} col-span-2`}>leman-zeynalli</li>
+        <Link className={`${linkClass} ${isActive('/')}`} href="/">
           _hello
         </Link>
-        <Link className={linkClass} href="/about">
+        <Link className={`${linkClass} ${isActive('/about')}`} href="/about">
           _about-me
         </Link>
-        <Link className={linkClass} href="/projects">
+        <Link
+          className={`${linkClass} ${isActive('/projects')}`}
+          href="/projects"
+        >
           _projects
         </Link>
       </ul>
       <div className="right flex">
-        <Link className={linkClass} href="">
+        <Link
+          className={`${linkClass} ${isActive('/contact')}`}
+          href="/contact"
+        >
           _contact-me
         </Link>
       </div>
