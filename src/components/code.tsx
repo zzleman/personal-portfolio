@@ -1,17 +1,37 @@
-import Image from 'next/image';
-import mainImg from '../assets/mainIconsdark.svg';
+'use client';
+import { useEffect, useState } from 'react';
+import { getHighlighter } from 'shiki';
 
-export default function CodeClient() {
+interface CodeSnippetProps {
+  snippets: { language: string; code: string }[];
+}
+
+export default function CodeSnippet({ snippets }: CodeSnippetProps) {
+  const [codeHTML, setCodeHTML] = useState<string[]>([]);
+
+  useEffect(() => {
+    getHighlighter({ themes: ['dark-plus'], langs: ['tsx', 'js'] }).then(
+      (highlighter) => {
+        const formattedSnippets = snippets.map((snippet) =>
+          highlighter.codeToHtml(snippet.code, {
+            lang: snippet.language,
+            theme: 'dark-plus',
+          })
+        );
+        setCodeHTML(formattedSnippets);
+      }
+    );
+  }, [snippets]);
+
   return (
-    <div className="relative inline-block">
-      <div className="absolute inset-0 bg-custom_purple rounded-full blur-3xl opacity-30 z-0"></div>
-      <Image
-        src={mainImg}
-        alt="code"
-        height={650}
-        width={650}
-        className="relative z-10"
-      />
+    <div className="flex flex-col gap-4 w-full overflow-x-auto">
+      {codeHTML.map((html, index) => (
+        <div
+          key={index}
+          className="bg-gray-900 p-3 rounded-lg overflow-x-auto"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      ))}
     </div>
   );
 }

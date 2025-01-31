@@ -1,4 +1,5 @@
-import Code from '@/components/code';
+import Image from 'next/image';
+import mainImg from '../assets/mainIconsdark.svg';
 import Link from 'next/link';
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
         </div>
       </div>
       <div className="right">
-        <Code />
+        <Image src={mainImg} alt="mainImg" height={650} width={650} />
       </div>
     </div>
   );
