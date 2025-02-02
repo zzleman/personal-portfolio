@@ -1,4 +1,4 @@
-import Bio from '@/components/bio';
+'use client';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import FolderIcon from '@mui/icons-material/Folder';
@@ -6,8 +6,25 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import CodeSnippet from '@/components/code';
 import { codeSnippets } from '@/data/mock';
+import Interest from '@/components/interests';
+import Bio from '@/components/bio';
+import { useState } from 'react';
 
 export default function About() {
+  const [selectedOption, setSelectedOption] = useState<string>('bio');
+
+  const chooseOption = (option: string) => {
+    setSelectedOption(option);
+  };
+
+  const renderSelectedOption = () => {
+    if (selectedOption === 'bio') {
+      return <Bio />;
+    } else if (selectedOption === 'interests') {
+      return <Interest />;
+    }
+    return null;
+  };
   return (
     <div className="text-main_color grid grid-cols-12 w-full h-screen">
       <div className="left col-span-2 border-r h-screen border-main_color border-opacity-30">
@@ -17,17 +34,31 @@ export default function About() {
             <p>personal-info</p>
           </div>
           <div className="flex flex-col gap-3 px-2 py-4">
-            <div className="flex gap-1">
+            <div
+              className="flex gap-1 cursor-pointer"
+              onClick={() => chooseOption('bio')}
+            >
               <ChevronRightIcon />
               <FolderIcon className="text-custom_pale_orange" />
-              <p>bio</p>
+              {selectedOption === 'bio' ? (
+                <p className="text-white">bio</p>
+              ) : (
+                <p>bio</p>
+              )}
             </div>
-            <div className="flex gap-1">
+            <div
+              className="flex gap-1 cursor-pointer"
+              onClick={() => chooseOption('interests')}
+            >
               <ChevronRightIcon />
               <FolderIcon className="text-custom_green" />
-              <p>interests</p>
+              {selectedOption === 'interests' ? (
+                <p className="text-white">interests</p>
+              ) : (
+                <p>interests</p>
+              )}
             </div>
-            <div className="flex gap-1">
+            <div className="flex gap-1 cursor-pointer">
               <ChevronRightIcon />
               <FolderIcon className="text-custom_purple" />
               <p>education</p>
@@ -39,12 +70,12 @@ export default function About() {
             <ArrowDropDownIcon />
             <p>contacts</p>
           </div>
-          <div className="flex flex-col gap-3 px-2 py-4">
-            <div className="flex gap-2">
+          <div className="flex flex-col gap-3 px-2 py-4 text-sm">
+            <div className="flex gap-2 items-center">
               <EmailIcon />
-              <p>lemanz</p>
+              <p>lemanzeynalli67@gmail.com</p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
               <PhoneIcon />
               <p>+994516338114</p>
             </div>
@@ -55,7 +86,7 @@ export default function About() {
         <p className="px-2 h-10 border border-main_color border-opacity-30 flex items-center">
           personal-info
         </p>
-        <Bio />
+        {renderSelectedOption()}
       </div>
       <div className="right col-span-5 overflow-x-auto ">
         <p className="h-10 border border-main_color border-opacity-30 flex items-center px-2">

@@ -1,7 +1,7 @@
-import { bio } from '@/data/mock';
+import { interests } from '@/data/mock';
 
-export default function Bio() {
-  const lines = bio.code.split('\n');
+export default function Interest() {
+  const lines = interests.code.split('\n');
   return (
     <div>
       <ol className="list-decimal px-9">

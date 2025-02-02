@@ -44,3 +44,38 @@ export async function generateStaticParams() {
       `,
   },
 ];
+
+export const bio = {
+  language: 'tsx',
+  code: `About Me 
+   I have 1.5 years of experience in frontend development. 
+   Skilled in React, Redux, TypeScript, and Tailwind CSS. 
+   Fast learner, always seeking new challenges. 
+   Team player, ready to support teammates. 
+   Passionate about learning and exploring new opportunities. 
+   Most interested in React and TypeScript. 
+   Thank you for reading my bio.`,
+};
+
+export const interests = {
+  language: 'tsx',
+  code: `My Interests: 
+  
+    🎬 Movies & Series:  
+    I absolutely love watching movies and serials! My favorite genres are Thriller and Sci-Fi.  Here are my top 3 favorites:  
+    1. Inception
+    2. Game of Thrones (ignore the last season :D)  
+    3. Eternal Sunshine of Spotless Mind
+
+    🎶 Music:  
+    I’m a huge fan of Indie Pop, but I listen to anything that sounds good! Here are the top 3 favorite songs I can’t stop listening to lately:  
+    1. "Mirrors" by Justin Timberlake  
+    2. "Hayloft II" by Mother Mother
+    3. "Stole the show" by Kygo
+
+    💻 Coding:  
+    I love coding, and I work most often with React, Next.js, TypeScript, and Tailwind CSS.  
+    It doesn’t matter if I write in React or just HTML, CSS, and JS always use Tailwind CSS because it’s my favorite for styling.  
+    I'm passionate about building efficient and scalable web applications!
+  `,
+};
