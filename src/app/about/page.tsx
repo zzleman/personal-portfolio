@@ -6,9 +6,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import CodeSnippet from '@/components/code';
 import { codeSnippets } from '@/data/mock';
-import Interest from '@/components/interests';
-import Bio from '@/components/bio';
 import { useState } from 'react';
+import PersonalInfo from '@/components/personal-info';
 
 export default function About() {
   const [selectedOption, setSelectedOption] = useState<string>('bio');
@@ -19,9 +18,11 @@ export default function About() {
 
   const renderSelectedOption = () => {
     if (selectedOption === 'bio') {
-      return <Bio />;
+      return <PersonalInfo option="bio" />;
     } else if (selectedOption === 'interests') {
-      return <Interest />;
+      return <PersonalInfo option="interests" />;
+    } else if (selectedOption === 'education') {
+      return <PersonalInfo option="education" />;
     }
     return null;
   };
@@ -58,10 +59,17 @@ export default function About() {
                 <p>interests</p>
               )}
             </div>
-            <div className="flex gap-1 cursor-pointer">
+            <div
+              className="flex gap-1 cursor-pointer"
+              onClick={() => chooseOption('education')}
+            >
               <ChevronRightIcon />
               <FolderIcon className="text-custom_purple" />
-              <p>education</p>
+              {selectedOption === 'education' ? (
+                <p className="text-white">education</p>
+              ) : (
+                <p>education</p>
+              )}
             </div>
           </div>
         </div>

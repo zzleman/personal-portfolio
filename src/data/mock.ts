@@ -79,3 +79,11 @@ export const interests = {
     I'm passionate about building efficient and scalable web applications!
   `,
 };
+
+export const education = {
+  language: 'tsx',
+  code: `Education:
+    🎓 Bachelor of Information Technologies, Azerbaijan State Economic University, Baku, Azerbaijan
+    🎓 Fullstack Development, Code Academy
+  `,
+};
