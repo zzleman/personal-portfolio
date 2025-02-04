@@ -17,7 +17,9 @@ export default function Header() {
   return (
     <div className="text-main_color flex justify-between min-h-14 border border-main_color border-opacity-15 z-50 ">
       <ul className="left grid grid-cols-5">
-        <li className={`${linkClass} col-span-2`}>leman-zeynalli</li>
+        <li className={`${linkClass} col-span-2 cursor-not-allowed`}>
+          leman-zeynalli
+        </li>
         <Link className={`${linkClass} ${isActive('/')}`} href="/">
           _hello
         </Link>

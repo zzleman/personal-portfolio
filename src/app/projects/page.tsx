@@ -14,6 +14,7 @@ import eslintIcon from '@/assets/langs/Logos/eslint-original.png';
 import gitIcon from '@/assets/langs/Logos/git-original.png';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import Project from '@/components/project';
+import projectOne from '@/assets/projects/project-1.png';
 
 const Page = () => {
   const borderStyle = `border-r h-screen border-main_color border-opacity-30`;
@@ -43,8 +44,28 @@ const Page = () => {
         <h3 className="border px-3 h-10 flex items-center border-main_color border-opacity-30">
           projects
         </h3>
-        <div>
-          <Project />
+        <div className="grid grid-cols-3 py-5 px-24 gap-10">
+          <Project
+            number={1}
+            title="_ir-master-group"
+            img={projectOne}
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            url="https://irmastergroup.az/"
+          />
+          <Project
+            number={2}
+            title="_ir-master-group"
+            img={projectOne}
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            url="https://irmastergroup.az/"
+          />
+          <Project
+            number={3}
+            title="_ir-master-group"
+            img={projectOne}
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            url="https://irmastergroup.az/"
+          />
         </div>
       </div>
     </div>
