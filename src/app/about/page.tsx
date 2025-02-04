@@ -10,6 +10,8 @@ import { useState } from 'react';
 import PersonalInfo from '@/components/personal-info';
 
 export default function About() {
+  const borderStyle = `border-r h-screen border-main_color border-opacity-30`;
+
   const [selectedOption, setSelectedOption] = useState<string>('bio');
 
   const chooseOption = (option: string) => {
@@ -28,7 +30,7 @@ export default function About() {
   };
   return (
     <div className="text-main_color grid grid-cols-12 w-full h-screen">
-      <div className="left col-span-2 border-r h-screen border-main_color border-opacity-30">
+      <div className={`left col-span-2 ${borderStyle}`}>
         <div className="personal-info">
           <div className="text-white flex border border-main_color border-opacity-30 h-10 items-center px-2">
             <ArrowDropDownIcon />
@@ -90,7 +92,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="middle col-span-5 border-r h-screen border-main_color border-opacity-30">
+      <div className={`middle col-span-5 ${borderStyle}`}>
         <p className="px-2 h-10 border border-main_color border-opacity-30 flex items-center">
           personal-info
         </p>
