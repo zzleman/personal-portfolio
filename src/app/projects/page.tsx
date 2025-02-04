@@ -12,16 +12,19 @@ import muiIcon from '@/assets/langs/Logos/materialui-plain.png';
 import firebaseIcon from '@/assets/langs/Logos//firebase-plain.png';
 import eslintIcon from '@/assets/langs/Logos/eslint-original.png';
 import gitIcon from '@/assets/langs/Logos/git-original.png';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Project from '@/components/project';
 
 const Page = () => {
   const borderStyle = `border-r h-screen border-main_color border-opacity-30`;
   return (
     <div className="text-main_color grid grid-cols-12 w-full h-screen">
       <div className={`left col-span-2 ${borderStyle}`}>
-        <h3 className="border px-3 h-10 flex items-center border-main_color border-opacity-30">
-          tech stack:
+        <h3 className="border px-3 h-10 flex items-center border-main_color border-opacity-30 text-white">
+          <ArrowDropDownIcon />
+          tech-stack
         </h3>
-        <div className="grid grid-cols-2 gap-8 px-6 py-5">
+        <div className="grid grid-cols-2 gap-16 px-6 py-10">
           <Image src={htmlIcon} alt="tech stack" width={50} height={50} />
           <Image src={cssIcon} alt="tech stack" width={50} height={50} />
           <Image src={jsIcon} alt="tech stack" width={50} height={50} />
@@ -34,6 +37,14 @@ const Page = () => {
           <Image src={muiIcon} alt="tech stack" width={50} height={50} />
           <Image src={eslintIcon} alt="tech stack" width={50} height={50} />
           <Image src={gitIcon} alt="tech stack" width={50} height={50} />
+        </div>
+      </div>
+      <div className={`right col-span-10 ${borderStyle}`}>
+        <h3 className="border px-3 h-10 flex items-center border-main_color border-opacity-30">
+          projects
+        </h3>
+        <div>
+          <Project />
         </div>
       </div>
     </div>

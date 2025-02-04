@@ -10,7 +10,9 @@ export default function Header() {
     'hover:text-white border border-main_color flex items-center px-4 cursor-pointer border-opacity-15';
 
   const isActive = (href: string) =>
-    pathname === href ? 'border-b-4 border-custom_orange text-white' : '';
+    pathname === href
+      ? 'border-b-2 border-0 border-orange-300 border-opacity-100 text-white'
+      : '';
 
   return (
     <div className="text-main_color flex justify-between min-h-14 border border-main_color border-opacity-15 z-50 ">
@@ -23,7 +25,7 @@ export default function Header() {
           _about-me
         </Link>
         <Link
-          className={`${linkClass} ${isActive('/projects')}`}
+          className={`${linkClass} ${isActive('/projects')} `}
           href="/projects"
         >
           _projects
