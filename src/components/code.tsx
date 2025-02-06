@@ -3,25 +3,30 @@ import { useEffect, useState } from 'react';
 import { getHighlighter } from 'shiki';
 
 interface CodeSnippetProps {
-  snippets: { language: string; code: string }[];
+  snippets?: { language: string; code: string }[];
+  snippet?: { language: string; code: string };
 }
 
-export default function CodeSnippet({ snippets }: CodeSnippetProps) {
+export default function CodeSnippet({ snippets, snippet }: CodeSnippetProps) {
   const [codeHTML, setCodeHTML] = useState<string[]>([]);
 
   useEffect(() => {
+    const allSnippets = snippets || (snippet ? [snippet] : []);
+
+    if (allSnippets.length === 0) return;
+
     getHighlighter({ themes: ['dark-plus'], langs: ['tsx', 'js'] }).then(
       (highlighter) => {
-        const formattedSnippets = snippets.map((snippet) =>
-          highlighter.codeToHtml(snippet.code, {
-            lang: snippet.language,
+        const formattedSnippets = allSnippets.map((snip) =>
+          highlighter.codeToHtml(snip.code, {
+            lang: snip.language,
             theme: 'dark-plus',
           })
         );
         setCodeHTML(formattedSnippets);
       }
     );
-  }, [snippets]);
+  }, [snippets, snippet]);
 
   return (
     <div className="flex flex-col gap-4 w-full overflow-x-auto">

@@ -87,3 +87,25 @@ export const education = {
     🎓 Fullstack Development, Code Academy
   `,
 };
+
+export const getContactFormSnippet = (
+  name: string,
+  email: string,
+  message: string
+) => ({
+  language: 'tsx',
+  code: `
+  const button = document.querySelector('#sendBtn');
+
+  const message = {
+    name: '${name}',
+    email: '${email}',
+    message: '${message}',
+    date: '${new Date().toDateString()}'
+    };  
+
+    button.addEventListener('click', () => {
+    form.send(message);
+  });
+  `,
+});
