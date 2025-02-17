@@ -6,8 +6,6 @@ type ContactResultProps = {
   name: string;
   email: string;
   message: string;
-  isSubmitted: boolean;
-  onReset: () => void;
 };
 
 const ContactResult: React.FC<ContactResultProps> = ({
@@ -16,9 +14,8 @@ const ContactResult: React.FC<ContactResultProps> = ({
   message,
 }) => {
   const snippet = getContactFormSnippet(name, email, message);
-
   return (
-    <div className="w-full p-4 border rounded">
+    <div className="w-full p-4 ">
       <div>
         <pre>
           <CodeSnippet snippet={snippet} />

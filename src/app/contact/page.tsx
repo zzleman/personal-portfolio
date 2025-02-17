@@ -71,7 +71,7 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className={`middle col-span-5 ${borderStyle}`}>
+      <div className={`middle col-span-5 ${borderStyle} `}>
         <p className="px-2 h-10 border border-main_color border-opacity-30 flex items-center">
           contacts
         </p>
@@ -79,20 +79,17 @@ const Page = () => {
           register={register}
           handleSubmit={handleSubmit}
           errors={errors}
-          watch={watch}
           onSubmit={onSubmit}
           isSubmitted={isSubmitted}
           onReset={handleReset}
         />
       </div>
       <div className="right col-span-5 overflow-x-auto ">
-        <div className="w-full max-w-full px-4 flex flex-col gap-5 text-sm py-5">
+        <div className="w-full max-w-full px-4 py-36 flex flex-col gap-5 text-sm ">
           <ContactResult
             name={watch('name')}
             email={watch('email')}
             message={watch('message')}
-            isSubmitted={isSubmitted}
-            onReset={handleReset}
           />
         </div>
       </div>

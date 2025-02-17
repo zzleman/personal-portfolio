@@ -3,7 +3,6 @@ import {
   UseFormRegister,
   FieldErrors,
   UseFormHandleSubmit,
-  UseFormWatch,
 } from 'react-hook-form';
 
 type Inputs = {
@@ -16,7 +15,6 @@ type ContactFormProps = {
   register: UseFormRegister<Inputs>;
   handleSubmit: UseFormHandleSubmit<Inputs>;
   errors: FieldErrors<Inputs>;
-  watch: UseFormWatch<Inputs>;
   onSubmit: (data: Inputs) => void;
   isSubmitted: boolean;
   onReset: () => void;
@@ -48,41 +46,45 @@ const ContactForm: React.FC<ContactFormProps> = ({
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-      <div>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col p-20 gap-4"
+    >
+      <div className="flex flex-col gap-2">
         <label htmlFor="name">_name:</label>
         <input
           {...register('name', { required: true })}
-          className="border p-2 w-full"
+          className="border p-2 w-full bg-transparent rounded-lg border-main_color border-opacity-50 outline-none"
         />
         {errors.name && (
           <span className="text-red-500">This field is required</span>
         )}
       </div>
-      <div>
+      <div className="flex flex-col gap-2">
         <label htmlFor="email">_email:</label>
         <input
           {...register('email', { required: true })}
-          className="border p-2 w-full"
+          className="border p-2 w-full bg-transparent rounded-lg border-main_color border-opacity-50 outline-none"
         />
         {errors.email && (
           <span className="text-red-500">This field is required</span>
         )}
       </div>
-      <div>
+      <div className="flex flex-col gap-2">
         <label htmlFor="message">_message:</label>
         <textarea
           {...register('message', { required: true })}
-          className="border p-2 w-full"
+          className="border p-2 w-full h-32 bg-transparent rounded-lg border-main_color border-opacity-50 outline-none"
         />
         {errors.message && (
           <span className="text-red-500">This field is required</span>
         )}
       </div>
-      <input
-        type="submit"
-        className="px-4 py-2 bg-green-500 text-white rounded cursor-pointer"
-      />
+      <div>
+        <button className="bg-gray-800 w-40 h-10 rounded-lg">
+          send-message
+        </button>
+      </div>
     </form>
   );
 };
