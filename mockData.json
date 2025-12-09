@@ -1,0 +1,144 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name": "_elpo-group",
+      "description": "Elpo Logistics is a modern logistics company website built with Next.js 13 and Strapi CMS. Features bilingual support (Azerbaijani/English), dynamic content management, service catalog, project gallery, quote request system, and responsive design. Integrated with headless CMS for easy content updates and optimized for performance and SEO.",
+      "image": {
+        "url": "/images/projects/project-4.png"
+      },
+      "tools": [
+        {
+          "id": 1,
+          "name": "Next.js"
+        },
+        {
+          "id": 2,
+          "name": "JavaScript"
+        },
+        {
+          "id": 3,
+          "name": "React"
+        },
+        {
+          "id": 4,
+          "name": "SASS"
+        },
+        {
+          "id": 5,
+          "name": "Strapi"
+        },
+        {
+          "id": 6,
+          "name": "Swiper"
+        }
+      ],
+      "link": "https://www.elpo-group.az/",
+      "createdAt": "2024-01-15T00:00:00.000Z",
+      "updatedAt": "2024-01-15T00:00:00.000Z",
+      "publishedAt": "2024-01-15T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "_clean-lab",
+      "description": "CleanLab is a modern, multi-language website for a professional cleaning service company in Azerbaijan. It's a responsive single-page application built with React and Vite that showcases cleaning services including home cleaning, office cleaning, carpet washing, window cleaning, and more. The website features full internationalization support (Azerbaijani, English, Russian), dynamic content management through Strapi CMS, and an automated deployment pipeline. It includes interactive galleries, service pages, pricing information, testimonials, and appointment booking functionality, all designed with a mobile-first responsive approach using Tailwind CSS. The website features full internationalization support (Azerbaijani, English, Russian), dynamic content management through Strapi CMS, and an automated deployment pipeline. It includes interactive galleries, service pages, pricing information, testimonials, and appointment booking functionality, all designed with a mobile-first responsive approach using Tailwind CSS.",
+      "image": {
+        "url": "/images/projects/project-2.png"
+      },
+      "tools": [
+        {
+          "id": 1,
+          "name": "React"
+        },
+        {
+          "id": 2,
+          "name": "i18n"
+        },
+        {
+          "id": 3,
+          "name": "Swiper"
+        },
+        {
+          "id": 4,
+          "name": "Tailwind CSS"
+        },
+        {
+          "id": 5,
+          "name": "Strapi"
+        }
+      ],
+      "link": "https://cleanlab.az/az",
+      "createdAt": "2024-02-20T00:00:00.000Z",
+      "updatedAt": "2024-02-20T00:00:00.000Z",
+      "publishedAt": "2024-02-20T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "_filologiya",
+      "description": "Filologiya is a multilingual university faculty website built with Next.js 15 and React 19, serving the Faculty of Philology at Azerbaijan State Pedagogical University. It features a responsive design with support for four languages (Azerbaijani, English, Russian, Turkish), dynamic content management for academic information, student services, publications, and e-learning resources, all enhanced with modern animations and a component-based architecture.",
+      "image": {
+        "url": "/images/projects/project-3.png"
+      },
+      "tools": [
+        {
+          "id": 1,
+          "name": "React"
+        },
+        {
+          "id": 2,
+          "name": "Next.js"
+        },
+        {
+          "id": 3,
+          "name": "TypeScript"
+        },
+        {
+          "id": 4,
+          "name": "i18n"
+        },
+        {
+          "id": 5,
+          "name": "ShadCN UI"
+        },
+        {
+          "id": 6,
+          "name": "ESLint"
+        }
+      ],
+      "link": "https://filologiya.az/en",
+      "createdAt": "2024-02-20T00:00:00.000Z",
+      "updatedAt": "2024-02-20T00:00:00.000Z",
+      "publishedAt": "2024-02-20T00:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "name": "_ir-master-group",
+      "description": "IR Master Group Website is a corporate service platform built to showcase the company’s engineering, construction, and installation capabilities. The website highlights the company’s expertise in repair, construction, electrical, heating, cooling, ventilation, and water supply systems. It presents the company’s mission, service areas, completed projects, and values with a clean, modern layout.",
+      "image": {
+        "url": "/images/projects/project-1.png"
+      },
+      "tools": [
+        {
+          "id": 1,
+          "name": "React"
+        },
+        {
+          "id": 2,
+          "name": "JavaScript"
+        },
+        {
+          "id": 3,
+          "name": "Tailwind CSS"
+        },
+        {
+          "id": 4,
+          "name": "i18n"
+        }
+      ],
+      "link": "https://irmastergroup.az/",
+      "createdAt": "2024-03-10T00:00:00.000Z",
+      "updatedAt": "2024-03-10T00:00:00.000Z",
+      "publishedAt": "2024-03-10T00:00:00.000Z"
+    }
+  ]
+}

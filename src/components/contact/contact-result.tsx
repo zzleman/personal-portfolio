@@ -1,11 +1,11 @@
 import { getContactFormSnippet } from '@/data/mock';
 import React from 'react';
-import CodeSnippet from './code';
+import { CodeSnippet } from '@/components/ui';
 
 type ContactResultProps = {
-  name: string;
-  email: string;
-  message: string;
+  name?: string;
+  email?: string;
+  message?: string;
 };
 
 const ContactResult: React.FC<ContactResultProps> = ({
@@ -15,12 +15,8 @@ const ContactResult: React.FC<ContactResultProps> = ({
 }) => {
   const snippet = getContactFormSnippet(name, email, message);
   return (
-    <div className="w-full p-4 ">
-      <div>
-        <pre>
-          <CodeSnippet snippet={snippet} />
-        </pre>
-      </div>
+    <div className="w-full animate-fade-in">
+      <CodeSnippet snippet={snippet} />
     </div>
   );
 };

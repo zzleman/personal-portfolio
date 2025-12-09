@@ -33,7 +33,7 @@ export default function CodeSnippet({ snippets, snippet }: CodeSnippetProps) {
       {codeHTML.map((html, index) => (
         <div
           key={index}
-          className="bg-gray-900 p-3 rounded-lg overflow-x-auto"
+          className="bg-[#1E1E1E] border border-main_color/20 p-4 rounded-lg overflow-x-auto shadow-lg hover:border-main_color/40 transition-all duration-300"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       ))}
